@@ -30,20 +30,13 @@ header.appendChild(headerTemp);
 
 
 }
-
 const headerAppender = (selector) => {
-  const selector = document.querySelector('header');
   // TASK 2
   // ---------------------
   // Implement this function taking a css selector as its only argument.
   // It should create a header using the Header component above, passing arguments of your choosing.
-  Header(newHeader => {
-    newHeader = { topics, music, announcements}
-
   // It should append the header to the element in the DOM that matches the given selector.
   //
-  headerParent.appendChild(Header(newHeader))
-  
-});
 }
+
 export { Header, headerAppender }
