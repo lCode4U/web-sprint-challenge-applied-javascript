@@ -1,4 +1,9 @@
-const Header = (title, date, temp) => {
+import React from "react";
+
+const entry = document.getElementsByClassName('header-container');
+console.log(entry);
+
+const Header = () => {
   // TASK 1
   // ---------------------
   // Implement this function taking `title`, `date` and `temp` as its 3 args and returning the markup below.
@@ -11,25 +16,54 @@ const Header = (title, date, temp) => {
   //    <span class="temp">{ temp }</span>
   //  </div>
   //
-  const headerObject = { title, date, temp };
-  const headerParent = document.querySelectorAll('body');
-  const header = document.createElement('div');
-  const headerDate = document.createElement('span');
-  headerDate.textContent = { date };
-  headerDate.classList.add('date');
-  const headerTitle = document.createElement('h1');
-  headerTitle.textContent = {title};
-  const headerTemp = document.createElement('span');
-  headerTemp.classList.add('temp');
-  headerTemp.textContent = {temp};
 
-header.appendChild(headerDate);
-header.appendChild(headerTitle);
-header.appendChild(headerTemp);
- headerParent.append(header);
+  // initiate elements needed for components
+  
+  const header = document.createElement("div");
+
+  const date = document.createElement('span');
+  const title = document.createElement('h1');
+  const temp = document.createElement('span');
+  
 
 
+  // set up structure of elements to// add proper classnames
+  header.classList.add("header");
+  date.classList.add("date");
+  temp.classList.add("temp");
+  
+  
+
+
+
+ // manipulating elements
+ const headerArray = { date: "June 19th, 2021", title: "Lambda Times", temp: '26'};
+debugger
+
+ //appending elements
+  
+  date.appendChild(header)
+  title.appendChild(header)
+  temp.appendChild(header)
+ 
+ 
+  // return the object
+return header;
+
+  
+
+  
+  
+  
 }
+
+
+
+
+
+
+
+
 const headerAppender = (selector) => {
   // TASK 2
   // ---------------------
