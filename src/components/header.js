@@ -1,9 +1,14 @@
-import React from "react";
+import  { render } from "react-dom"
+import react from "react";
+import { array } from "yargs";
 
-const entry = document.getElementsByClassName('header-container');
-console.log(entry);
 
-const Header = () => {
+
+
+const entry = document.getElementsByClassName('.header-container');
+
+
+const Header = (headerProps) => {
   // TASK 1
   // ---------------------
   // Implement this function taking `title`, `date` and `temp` as its 3 args and returning the markup below.
@@ -18,46 +23,38 @@ const Header = () => {
   //
 
   // initiate elements needed for components
-  
-  const header = document.createElement("div");
 
-  const date = document.createElement('span');
-  const title = document.createElement('h1');
-  const temp = document.createElement('span');
-  
-
-
-  // set up structure of elements to// add proper classnames
-  header.classList.add("header");
-  date.classList.add("date");
-  temp.classList.add("temp");
-  
-  
-
-
-
- // manipulating elements
- const headerArray = { date: "June 19th, 2021", title: "Lambda Times", temp: '26'};
-debugger
-
- //appending elements
-  
-  date.appendChild(header)
-  title.appendChild(header)
-  temp.appendChild(header)
  
+
+  const { date, title, temp } = headerProps;
+    const header = document.createElement('div');
+
+
  
-  // return the object
-return header;
-
+    // set up structure of elements to// add proper classnames
+    date.classList.add('date');
+    title.classList.add('title');
+    temp.classList.add('temp');
   
 
-  
-  
-  
-}
 
 
+    // manipulating elements
+    date.textContent = 'June 23, 2021';
+    title.textContent = 'Lambd Times';
+    temp.textContent = '26';
+   
+    //appending elements
+ 
+    new Array(header)
+  header.forEach(element => {
+      return element.append(header);
+    })
+
+    // return the object
+  return Header 
+
+  }
 
 
 
