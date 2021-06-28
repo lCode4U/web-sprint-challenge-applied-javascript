@@ -1,6 +1,6 @@
-import  { render } from "react-dom"
-import react from "react";
-import { array } from "yargs";
+import {render} from 'react-dom'
+import React from "React";
+
 
 
 
@@ -8,7 +8,7 @@ import { array } from "yargs";
 const entry = document.getElementsByClassName('.header-container');
 
 
-const Header = (headerProps) => {
+const Header = (headerProp) => {
   // TASK 1
   // ---------------------
   // Implement this function taking `title`, `date` and `temp` as its 3 args and returning the markup below.
@@ -26,7 +26,7 @@ const Header = (headerProps) => {
 
  
 
-  const { date, title, temp } = headerProps;
+  const { date, title, temp } = headerProp;
     const header = document.createElement('div');
 
 
@@ -59,7 +59,7 @@ const Header = (headerProps) => {
 
 
 
-
+  
 
 const headerAppender = (selector) => {
   // TASK 2
@@ -68,6 +68,6 @@ const headerAppender = (selector) => {
   // It should create a header using the Header component above, passing arguments of your choosing.
   // It should append the header to the element in the DOM that matches the given selector.
   //
-}
-
+ 
+  }
 export { Header, headerAppender }
