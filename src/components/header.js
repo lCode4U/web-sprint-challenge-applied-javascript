@@ -28,7 +28,7 @@ const Header = (headerProp) => {
 
   const { date, title, temp } = headerProp;
     const header = document.createElement('div');
-
+  console.log(headerProp);
 
  
     // set up structure of elements to// add proper classnames
